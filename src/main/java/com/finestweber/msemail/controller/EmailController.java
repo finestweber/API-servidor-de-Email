@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://api-servidor-de-email-production.up.railway.app")
 @RestController
 public class EmailController {
+
     @Autowired
     EmailService emailService;
+
     @PostMapping("/send-email")
     public ResponseEntity<EmailModel> sendingEmail(@RequestBody @Valid EmailDto emailDto){
         EmailModel emailModel = new EmailModel();
