@@ -11,11 +11,11 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/send-email")
-                .allowedOrigins("https://api-servidor-de-email-production.up.railway.app")
-                .allowedMethods("POST")
-                .allowCredentials(true)
-                .exposedHeaders("Access-Control-Allow-Origin");
+        registry.addMapping("/**");
+                //.allowedOrigins("https://api-servidor-de-email-production.up.railway.app")
+                //.allowedMethods("POST")
+                //.allowCredentials(true)
+                //.exposedHeaders("Access-Control-Allow-Origin");
     }
 }
 
