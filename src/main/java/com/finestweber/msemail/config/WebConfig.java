@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/send-email")
-                .allowedOrigins("https://seu-front-end.com")
+                .allowedOrigins("https://api-servidor-de-email-production.up.railway.app")
                 .allowedMethods("GET", "POST")
                 .allowCredentials(true);
     }
